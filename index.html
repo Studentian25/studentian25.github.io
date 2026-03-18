@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studentian</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent-color: #38bdf8;
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 80px 0 40px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            color: var(--text-dim);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        /* Video Section */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            background: #000;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+            margin-bottom: 60px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Pillars Section */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card i {
+            font-size: 2rem;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+        }
+
+        .card h3 { margin-top: 0; }
+
+        /* CTA */
+        .cta-box {
+            text-align: center;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            padding: 50px;
+            border-radius: 20px;
+            border: 1px solid var(--accent-color);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #000;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: opacity 0.2s;
+        }
+
+        .btn:hover { opacity: 0.9; }
+
+        footer {
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Knowledge Unpacked</h1>
+        <p class="subtitle">Decoding complex systems through the lenses of Data Science, Economics & Finance, Psychology, and many more!</p>
+        <a href="#subscribe" class="btn"><i class="fab fa-youtube"></i> Subscribe Now</a>
+    </header>
+
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/@Studentian" allowfullscreen></iframe>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <i class="fas fa-chart-line"></i>
+            <h3>Data Science</h3>
+            <p>Moving beyond basic coding to understand the mathematical intuition and storytelling behind modern data.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-microchip"></i>
+            <h3>Economics & Finance</h3>
+            <p>Analyzing global markets and economic theories to see how wealth and resources move in the 21st century.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-brain"></i>
+            <h3>Psychology</h3>
+            <p>Exploring behavioral biases and cognitive patterns that drive our decisions and shape our world.</p>
+        </div>
+    </div>
+
+    <section class="cta-box" id="subscribe">
+        <h2>Join the Journey</h2>
+        <p>Subscribe to stay updated with deep dives, tutorials, and insights.</p>
+        <br>
+        <a href="https://www.youtube.com/@Studentian" class="btn">Go to YouTube Channel</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Studentian.</p>
+    </footer>
+</div>
+
+</body>
+</html>
